@@ -1,0 +1,532 @@
+<!doctype html>
+<html>
+<head>
+<title> Restaurant </title>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  
+    <link rel="stylesheet" href="Css style sheet.css">
+    <style>
+     #container {
+       display: flex;
+       height: 100%;
+       background-color: rgb(248, 241, 213);
+
+     }
+     .checkbox {
+       display: none;
+     }
+     .left {
+         width: 60%;
+
+     }
+     .right {
+            width: 40%;
+            background-color: rgb(243, 169, 85);
+     }
+    .card {
+      box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); 
+        padding: 20px 10px;
+        text-align: center;
+        background-color: #f1f1f1;
+        border: green;
+    }
+    .food_card:focus, 
+.food_card:active {
+    background-color: green;
+    color: white;
+    transform: scale(100%);
+    box-shadow: none;
+}  
+
+.food_card::after {
+    
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.food_card:hover::after{
+    opacity: 0;
+    transform: translateX(-.1rem);
+}
+
+.food_card:focus::after, 
+.food_card:active::after {
+    background-color: green;
+    color: white;
+    transform: scale(100%);
+    box-shadow: none;
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(-.1rem);
+}
+
+
+    .intro button {
+      padding: 10px 10px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline:rgba(0, 0, 0, 0.2);
+    background-color: #9b489b;
+    border: solid 4px navy;
+    
+    box-shadow: 0 5px #999;
+    }
+   
+
+    }
+    #Sec3 { }
+    .column {
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+}
+
+
+.row {margin: 0 -5px;}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.card2 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(236, 155, 155);
+
+
+
+}
+
+
+ 
+
+.form {
+  display: flex;
+  flex-direction: row;
+}
+.search-field {
+  width: 90%;
+  padding: 10px 35px 10px 15px;
+  border: rgb(54, 31, 31) solid 2px;
+  border-radius: 100px;
+  outline: none;
+  background-color: rgb(255, 248, 220);
+}
+
+.search-button {
+  background:rgb(243, 235, 152);
+  border: solid 2px rgb(99, 1, 1);
+  outline: none;
+  margin-left: -33px;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+}
+.search-button:hover {background-color: blue;}
+
+.rightSide {
+        
+        box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2); 
+        padding: 20px 12px;
+        text-align: center;
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-pure-pink-purple-watercolor-gradient-background-backgroundpurple-backgroundpink-backgroundminimalistic-image_80325.jpg");
+        /*background-image: url("https://images.all-free-download.com/images/graphicthumb/blue_background_picture_2_169441.jpg");*/
+        color: rgb(3, 3, 46);
+        border: solid red;
+        
+      }
+      h1.rev {
+             font-weight: bold;
+             text-decoration: underline;
+             text-align: center;
+             font-family: Arial, Helvetica, sans-serif;
+             color: brown;
+             background-color: rgb(141, 152, 163);
+             
+             
+       } 
+  .leftSide{
+    background-color: white;
+    text-align: center ;
+    font-size: larger;
+    align-items: flex-end;
+    font-weight: bold;
+    color: red;
+    background-image: url("https://media.istockphoto.com/photos/wood-texture-table-top-with-blur-light-gold-bokeh-in-caferestaurant-picture-id1129661826?k=6&m=1129661826&s=612x612&w=0&h=nXi5KiVY7liQFbQbW4ijK-j2lubQBmtzST0yHZZXxjQ=");
+    background-repeat: repeat-y; 
+  }
+  .left2 {
+         width: 50%;
+          
+          background-color: white;
+        }   
+  .right2 {
+            width: 50%;
+            background-color: white(243, 169, 85); 
+            
+  }    
+  h1.rev2 {
+    font-weight: bold;
+             text-decoration: underline;
+             text-align: center;
+             font-family: Arial, Helvetica, sans-serif;
+             background-color: brown;
+             color: rgb(141, 152, 163);
+             
+
+  }    
+  .navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left:0;
+}
+
+
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  height: auto;
+} 
+
+
+.navbar a:hover {
+  background-color: rgb(30, 216, 13);
+} 
+
+
+
+
+
+
+
+#container2 {
+       display: flex;
+       height: 100%;
+      
+
+     }
+
+.left3 {
+         width: 50%;
+          
+         
+        }   
+  .right3 {
+            width: 50%;
+            text-align: right;
+            
+}
+
+   </style>
+   
+
+ 
+     
+  
+</head>
+<body>
+  
+  <div class="navbar" id="myTopnav">
+    <img class="logo" src="https://sol.krakero.dev/wp-content/uploads/2021/02/sol_logo.png" width=50 height=50 align="left">
+   <div class="checkbox">
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox" class="menu-label"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/1024px-Hamburger_icon.svg.png" width="20" height="20" align="right" class="enter"></label>
+  <label for="checkbox" class="exit-label"><img src="https://static.thenounproject.com/png/79124-200.png" width="20" height="20" class="exit"></label>
+  <div class="containerdivNewLine" id="menu-newline"></div>
+  </div> 
+     <div class="menu">
+    <a class="menu" href="#home">Home</a>
+    <a class="menu" href="#Specialities">Our Specialities</a>
+    <a class="menu" href="#Recommendations">Recommendations</a>
+    <a class="menu" href="#Reviews">Reviews and Feedback</a>
+    <a class="menu" href="#footer">Contact Us</a>
+    </div>
+    
+  </div>
+  
+    
+  
+  <br>
+  <a name="home"></a>
+  <h1 class="intro-img"><img src="https://pngimg.com/uploads/welcome/welcome_PNG107.png" width=500 heigth=100 align="center"></h1>
+    <div id="container">
+    
+    
+    <div class="left">
+       <img src="https://www.webfx.com/blog/wp-content/uploads/2015/08/celebrate-celebration-cheers-1268558-1024x684.jpg"
+        width="750" height="800">
+    </div>
+    <div class="right">
+      <img class="cover" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/03ceea7581665.560b23d54310e.png"
+      width="300" height="300"/>
+      <p class="intro">Spice of Life is sprouting its sapling in the beautiful, vibrant city of Kolkata. We serve the most authentic, delicious food, providing high standards in service and quality. Our sincere effort is to make your dining experience memorable by bringing to you centuries old Cuisine, and recipes from our mother’s kitchen.</p>
+       <p class="intro"><button><a href="#Specialities">Check out our specialities</button></p>
+      <img src="https://i.guim.co.uk/img/media/cb7ecc99b0a2e64b18468d655f3226b0cd71be6a/0_283_5843_3505/master/5843.jpg?width=445&quality=45&auto=format&fit=max&dpr=2&s=7191718b9699f6941ecae284ff0fe190"
+      width= "500" height="250" align=right>
+    </div>
+  </div>
+   <a name="Specialities"></a>
+  <div id="Sec2">
+    <br /><br />
+ <h1 class="main">Our Specialities</h1>
+ <h3 class="sub">(The best in the town)</h3> <hr />
+   
+    <div class="card">
+  <img src="https://www.cubesnjuliennes.com/wp-content/uploads/2021/03/Best-Mutton-Biryani-Recipe.jpg" 
+    width="200" height="200" align=center>
+   <h1 class="name">Awadhi Mutton Biriyani <img src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="30" height="30"></h1>
+   <p class="focus"><button class="food_card">Add+</button></p>
+   <p class="desc">Awadhi Mutton Biryani holds a regal legacy from the kitchen of Nawabs and Nizams that needs no introduction or special mentions.
+                   The beautifully spiced and fragrant layers of biryani rice centred with juicy, tender meat and spices is pure bliss!</p>
+                   <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+    <p class="discount">Available at 25% discount</p>
+    <h3 class="price">Rs.300</h3>
+     </div>
+     <hr />
+
+<div class="card">
+    <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Kebab.jpg" 
+      width="200" height="200" align=center>
+     <h1 class="name">Kebabs</h1>
+     <p class="focus"><button class="food_card">Add+</button></p>
+     <p class="desc">Varieties of delicious kebabs both veg and non-veg cooked with great care. Each plate consists of 5 pieces of mouth-watering kebabs. </p>
+     <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+      <p class="discount">Available at 30% discount</p>
+      <h3 class="price">Non-veg: Rs.450/plate <br /> Veg: Rs.300/plate</h3>
+      
+  </div>  <hr />
+  
+   <div class="card">
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2020/03/hakka-noodles-recipe-500x500.jpg" 
+          width="200" height="200" align=center>
+         <h1 class="name">Hakka Noodles <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_E6Dgqu5BsVCylb52voPqupsF6WQ8QEgrdw&usqp=CAU" width="30" height="30"></h1>
+         <p class="focus"><button class="food_card">Add+</button></p>
+         <p class="desc">Hakka noodles are thin, flat noodles made from unleavened dough made with rice or wheat flour.
+           Packed with vitamins, proteins, and carbs, these veg Hakka noodles will leave you feeling both satisfied and yearning for more! </p>
+           <a class="extra" href="#popup"  id="know-more"><button class="food_card">Know More</button></a>
+          <p class="discount">Available at 20% discount</p>
+          <h3 class="price">Rs.250</h3>
+          
+      </div> 
+      <hr />
+          
+            <div class="card">
+                <img src= "https://www.keep-calm-and-eat-ice-cream.com/wp-content/uploads/2020/10/Chocolate-sundae-square.png"
+                  width="200" height="200" align=center>
+                 <h1 class="name">Chocoalte Sundae <img src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="30" height="30"></h1>
+                 
+                 <p class="focus"><button class="food_card">Add+</button></p>
+                 <p class="desc"> Scoops of chocolate and coffee ice cream get ladled with chocolate and marshmallow sauces, then topped with toasted hazelnuts and chunks of chocolate in this amazing dessert!</p>
+                 <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+                  <p class="discount">Available at 20% discount</p>
+                  <h3 class="price">Rs.200</h3>
+                  
+              </div> 
+            </div>
+            
+            <a name="Recommendations"></a>
+            <div class="Sec3">
+      <br> <br /><br />
+      <h1 class="recom">Recommendations</h1>
+      <h2 class="recom">(Enjoy our delicacies!)</h2>
+      <form action="/" method="GET" class="form">
+        <input type="search" placeholder="Search" class="search-field" />
+        <button class="search-button">
+          <img src="https://www.kindacode.com/wp-content/uploads/2020/12/search.png" width=50 height=50>
+            
+          
+        </button>
+      </form>
+      <br />
+      
+      <div class="row">
+        <div class="column">
+          <div class="card2">
+            <img class="item" src="https://s3.envato.com/files/299635531/DSC_4935.jpg" width="200" height="200">
+            <h1 class="name">Paneer Butter Masala <br> <img class="sign" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_E6Dgqu5BsVCylb52voPqupsF6WQ8QEgrdw&usqp=CAU" width="20" height="20"></h1>
+            <p class="desc">This Paneer Butter Masala is a rich and creamy dish of paneer (cottage cheese) in a tomato, butter and cashew sauce (Makhani gravy).The dish has a lovely tang flavour! </p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            
+            <p class="focus2"><button>Buy</button></p>
+            <p class="discount">Available at 20% discount</p>
+            <h3 class="price">Rs.250/plate</h3>
+            
+          </div> <br>
+        </div>
+        <div class="column">
+          <div class="card2"><img class="item" src="https://static.toiimg.com/thumb/53240689.cms?width=1200&height=900" width="200" height="200">
+            <h1 class="name">Tandoori Chicken <br><img class="sign" src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="20" height="20"></h1>
+            <p class="desc">Tandoori chicken is a chicken dish prepared by roasting chicken marinated in yogurt and spices in a tandoor.Enjoy the lovable taste of 6 pieces of grilled chicken in this dish!</p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button></p>
+            <p class="discount">Available at 25% discount</p>
+            <h3 class="price">Rs.550/plate</h3></div> <br>
+
+        </div>
+        <div class="column">
+          <div class="card2"><img class="item" src="https://s9c2c8i7.rocketcdn.me/wp-content/uploads/2020/03/fish-curry.jpg" width="200" height="200">
+            <h1 class="name">Fish Curry <br> <img class="sign" src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="20" height="20"></h1>
+            <p class="desc">Simple,delicious and flavourful Indian fish curry in an onion tomato base is a craving for any Bengali! Fish is the favourite sea-food here and we bring to you an amazing curry.</p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button></p>
+            <p class="discount">Available at 20% discount</p>
+            <h3 class="price">Rs.300/plate</h3></div> <br>
+        </div> 
+        <div class="column">
+          <div class="card2"><img class="item" src="https://mummyrecipes.in/wp-content/uploads/2019/06/chickenSoup.jpg" width="200" height="200">
+            
+            <h1 class="name">Classic Chicken Soup <br><img class="sign" src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="20" height="20"></h1>
+            <p class="desc">This classic chicken soup consists of a clear chicken broth, with pieces of fresh chicken and vegetables. It serves as a perfect healthy starter and has an unforgettable taste!  </p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button></p>
+            <p class="discount">Available at 15% discount</p>
+            <h3 class="price">Rs.100/bowl</h3></div> <br>
+        </div> 
+        <div class="column">
+          <div class="card2"><img class="item"  src="https://www.madhuseverydayindian.com/wp-content/uploads/2020/06/vegetable-pulao-instant-pot-pressure-cooker.jpg" width="200" height="200">
+            <h1 class="name">Pulao <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_E6Dgqu5BsVCylb52voPqupsF6WQ8QEgrdw&usqp=CAU" width="20" height="20"></h1>
+            <p class="desc">Pulao or pilaf, is comfort food at its best and good appetizer.This one-pot dish made with rice and vegetables has added spices and herbs, giving it a mild aromatic flavor.</p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button></p>
+            <p class="discount">Available at 25% discount</p>
+            <h3 class="price">Rs.200/plate</h3></div> <br>
+        </div>
+        <div class="column">
+          <div class="card2"><img  class="item" src="https://1.bp.blogspot.com/-AUlj9Rsjay4/X33kgSTWsiI/AAAAAAAAY10/9xU9l90qa1cQoUBx3IxtH1nsCyM36KX5QCLcBGAsYHQ/s2048/capsicum%2Bchicken%2B13.JPG" width="200" height="200">
+            <h1 class="name">Bell Pepper Chicken <br> <img src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="20" height="20"></h1>
+            <p class="desc">This Spicy Pepper Chicken full of the best spicy peppery flavors! Tender chicken pieces get tossed with aromatics, onion, red bell pepper, and dried red chilies in a mouthwatering sauce infused with black pepper is the best main course.
+ 
+            </p> <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button>
+              <p class="discount">Available at 30% discount</p>
+              <h3 class="price">Rs.300/plate</h3></p></div> <br>
+        </div>
+        <div class="column">
+          <div class="card2"><img class="item" src="https://aroma-grill.com/wp-content/uploads/2020/08/Malai_Kofta.jpg" width="200" height="200">
+            <h1 class="name">Malai Kofta <br> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_E6Dgqu5BsVCylb52voPqupsF6WQ8QEgrdw&usqp=CAU" width="20" height="20"></h1>
+            <p class="desc">Enjoy the taste of koftas dunked in creamy sauce in this superb dish! The special gravy has the balanced taste of sweetness coming from onions, tang from tomatoes and crisp of the fried balls making it exotic. </p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button>
+              <p class="discount">Available at 25% discount</p>
+              <h3 class="price">Rs.245/plate</h3></p></div> <br>
+        </div>
+        <div class="column">
+          <div class="card2"><img class="item" src="https://www.okbazar.in/wp-content/uploads/2020/11/Screenshot_15.jpg" width="200" height="200">
+            <h1 class="name">Chicken Kati Rolls <br> <img src="https://ih1.redbubble.net/image.756552505.4596/aps,504x498,small,transparent-pad,600x600,f8f8f8.u3.jpg" width="20" height="20"></h1>
+            <p class="desc">Succulent pieces of spicy chicken cooked with freshly chopped onions and peppers, drizzled with a tangy cilantro mint chutney, and rolled in soft flaky parathas make up this dish. Enjoy its complex flavour and freshness in every bite!</p>
+            <a class="extra" href="#popup" id="know-more"><button class="food_card">Know More</button></a>
+            <p class="focus2"><button>Buy</button>
+              <p class="discount">Available at 15% discount</p>
+              <h3 class="price">Rs.100/piece</h3></p></div> <br>
+        </div>
+      </div> <br><br>
+    </div> 
+   </div> 
+   <a name="Reviews"></a>
+   <div id="container">
+            
+        
+  <div class="right2"> 
+    <br>  
+    <h1 class="rev">Reviews</h1>
+    <div class="rightSide">
+            <img class="person" src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+             width="200" height="200" />
+            <h2>Arun Sharma:</h2> <p>I liked the food quality,also the rates are very reasonable.I often go to this place, in a word its a nice place for food. Would recommend coming here to everyone!</p>
+        </div>
+        <hr />
+        <div class="rightSide">
+            <img  class="person" src="https://indianwomenblog.org/wp-content/uploads/2018/01/Cover-011.jpg"
+             width="200" height="200" />
+            <h2>Mohini Pathak:</h2> <p>One of the best places in the town to dine with friends or family! The quality of food is very good and the ambience is pleasant too with proper hygine. Lovely restaurant!</p>
+        </div>
+        <hr />
+        <div class="rightSide">
+            <img  class="person" src="https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg"
+             width="200" height="200" />
+            <h2>Vishal Iyenger:</h2> <p>The kebabs of this restaurant are my favourite. The Indian dishes are extremely delicious too. All in all excellent service.</p>
+        </div>
+        <hr />
+        
+        
+        </div>
+      <div class="left2">
+        <div class="leftSide">
+          <br>
+        <h1 class="rev2">Feedback Form</h1>
+        <form>
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br><br><br>
+          <label for="mail">Email id:</label><br>
+           <input type="email" id="email" name="email" required><br><br><br> 
+           <label for="gender">Gender:</label><br>
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label><br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label><br>
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label><br><br><br>
+          <label for="Review">Kindly type your review here:</label><br>
+          <textarea></textarea><br><br><br>
+          <input type="submit" value="Submit the form"><br><br>
+          <img class="thanks" src="https://thumbs.dreamstime.com/b/thank-you-text-written-over-green-background-thank-you-spoon-fork-knife-circular-green-123217540.jpg"
+          height=650 width=600>
+        </form>
+     </div></div>
+    </div> <br><br><br>
+    <a name="footer"></a>
+    <div class="footer">
+       <h1 class="footer_head">Contact Us</h1>
+      <div class="links" id="container2">
+      <div class="left3">  
+      <h2 class="footer_head">Follow us on:</h2>
+         <div class="footer_body">
+        <a href="https://www.google.com"><img class="smedia" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" width=60 height=60> Facebook</a><br><br>
+        <a href="https://www.google.com"><img class="smedia" src="https://image.flaticon.com/icons/png/512/124/124021.png" width="60" height="60">Twitter</a><br><br>
+        <a href="https://www.google.com"><img class="smedia" src="https://1000logos.net/wp-content/uploads/2017/02/New-Instagram-logo.jpg" width="60" height="60"> Instagram</a><br><br>
+        </div> </div>
+        <img class="footer_pic" src="https://sol.krakero.dev/wp-content/uploads/2021/02/sol_logo.png" width=300 height=300 align= "center">
+      <div class="right3">
+        <h2 class="footer_head">For more information:</h2>
+        <div class="footer_body">
+        <a href="https://www.google.com"><button class="btn">Terms and conditions</button></a> <br><br>
+        <a href="https://www.google.com"><button class="btn">Privacy Policy</button></a> <br><br>
+        <a href="https://www.google.com"><button class="btn">Copyright info</button></a> <br> <br>
+      </div> </div>
+      </div>
+        <a class="footer_body" href="#home">Go to top</a> 
+    </div>
+    <a name="popup"></a>
+    <div id="popup">
+      <div class="popup-content">
+          <h1>Food Description</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet tellus cras adipiscing enim. Sed cras ornare arcu dui vivamus arcu felis bibendum. At elementum eu facilisis sed odio morbi quis commodo. Phasellus vestibulum lorem sed risus ultricies tristique nulla. Commodo odio aenean sed adipiscing diam donec adipiscing. Erat imperdiet sed euismod nisi porta lorem. Ut morbi tincidunt augue interdum velit euismod in pellentesque. Gravida arcu ac tortor dignissim convallis aenean et. Neque vitae tempus quam pellentesque nec nam. Quam vulputate dignissim suspendisse in est ante in nibh mauris. Posuere lorem ipsum dolor sit amet consectetur adipiscing. Eget magna fermentum iaculis eu non diam.</p>
+          <a href="#" class="focus2"><button class="close-popup">Close</button></a>
+      </div>
+ </div>
+    
+    
+              
+</body>

@@ -1,0 +1,513 @@
+* {
+     box-sizing:border-box;}
+
+ html{
+     scroll-behavior: smooth;
+ }
+     
+#Sec2 {
+    background-image: linear-gradient(to left, #eec8dde0, #ebd2d2e0);
+    backface-visibility: hidden;
+}
+h1.main {
+      
+       font-size: 50px;
+       letter-spacing: 0.5px;
+       color: rgb(35, 214, 59);
+       text-align: center;
+       text-decoration: underline;
+       font-family: Arial, Helvetica, sans-serif;
+       animation-name: FromTop;
+       animation-duration: 2s;
+       animation-timing-function: ease-out;
+       animation-iteration-count: inherit;
+       
+
+}    
+h3.sub {
+    font-size: 30px;
+    letter-spacing: 3px;
+    color: rgb(253, 11, 201);
+    background-color: burlywood;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    animation-name: FromBottom;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    
+}
+h1.name {
+    background-color: yellow;
+    font-size: 25px;
+    font-style: bold;
+    
+    color: rgb(48, 37, 145);
+    text-align:center;
+
+}
+p.desc {
+    border: 1.5px solid #1d0124;
+    color:rgb(245, 93, 6);
+    font-family:'Times New Roman', Times, serif;
+    background-color: rgb(214, 213, 213);
+}
+p.discount {
+    color: red;
+    font-size: 20px;
+    font-style: italic;
+}
+
+h3.price {
+    text-align:right;
+    color: blueviolet;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+
+p.focus {
+  
+  
+   text-align: left;
+  cursor: pointer;
+  width: 100%;
+  font-size: 20px;
+}
+
+.food_card {
+    padding: 10px 10px;
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+    background-color: #32f5aa;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px #999;
+  }
+  
+  .food_card button:hover {background-color: #3e8e41}
+  
+  
+@keyframes FromTop
+{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+@keyframes FromBottom
+{
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px);
+    }
+}
+h1.intro-img{
+    text-align: center;
+    align-items: center;
+    background-color: rgb(248, 241, 213);
+    top: 3px;
+    left: 0;
+    animation-name: FromTop;
+       animation-duration: 2s;
+       animation-timing-function: ease-out;
+
+}
+p.intro{
+    text-align: justify;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+ 
+ .focus2 button {
+    padding: 10px 10px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    background-color: #f71d0e;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px rgb(222, 238, 78);
+  }
+  .focus2 button:hover {background-color: #e9fa03}
+
+  h1.recom {
+      text-align: center;
+      text-decoration: wavy;
+      
+
+  }
+  h2.recom {
+      text-align: center;
+      letter-spacing: 6px;
+  }
+  .footer{
+      background-color: rgb(236, 85, 85);
+      color: whitesmoke;
+      text-align: center;
+      font-size: larger;
+  }
+  .links {
+      text-align: left;
+      color: whitesmoke;
+      
+  }
+  .btn {
+    background-color: rgb(105, 171, 236); 
+    border: none; 
+    color: whitesmoke; 
+    padding: 12px 16px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: cornsilk;}
+    
+  
+  
+  .btn:hover {
+    background-color: rgb(49, 62, 100);
+  }
+  
+
+  #popup {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    background:rgba(0,0,0,0.60);
+    z-index: 2;
+    display: none;
+  }
+  .popup-content {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:80vw;
+    height: auto;
+    padding:1rem 2rem;
+    background:#ffefefdf;
+    color: black;
+    font-size: 12px;
+    
+    border-radius: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    border: .4rem solid #ff4d4d;
+    background-image: url("https://img.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg?size=626&ext=jpg");
+  }
+
+  .popup-content h1 {
+      text-align: center;
+      padding: 2rem;
+  }
+
+  .popup-content p {
+      padding: 4rem;
+      line-height: 2.5rem;
+  }
+
+  #popup a.close-popup {
+    position: absolute;
+    margin-bottom: auto;
+    align-items: center;
+  }
+
+  .popup-exit {
+      height: 3rem;
+  }
+
+  #popup:target {
+    display:block;
+  }
+
+  @media only screen and (max-width: 600px) {
+    html, body {
+        font-size: 7px;
+        overflow-x: hidden;
+        max-width: 100%;
+        
+    }
+
+   
+
+    .navbar {
+        height: auto;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+        
+    }
+     
+    .menu {
+        float: left;
+        
+        padding: 6px;
+        color: white;
+        text-decoration: none;
+        font-size: 8px;
+        
+    }
+
+    .logo {
+        width: 10;
+        height: 10;
+        margin-top: 4;
+        float: left;
+        
+    }
+    
+    
+
+    
+
+    
+    .footer {
+        margin: 0;
+        
+        background-color: rgb(236, 85, 85);
+        color: whitesmoke;
+        text-align: center;
+        height: fit-content;
+        width: 100%;
+    }
+    
+    h2.footer_head {
+        font-size: 16px;
+        padding: 0;
+        text-align: left;
+
+    }
+    h1.footer_head {
+        font-size: 20px;
+        text-align: center;
+
+    }
+    
+    .footer_body {
+        font-size: 10px;
+        padding: 2rem;
+        height: 20%;
+        
+    }
+    .footer_pic {
+        width: 50%;
+        height: 70%;
+        align-items: center;
+        margin-top: auto;
+    }
+    .smedia{
+        width: 20;
+        height: 20;
+    }
+    .btn {
+         
+        padding: 8px 12px; 
+        font-size: 10px; 
+        cursor: pointer; 
+        box-shadow: cornsilk;}
+        
+
+        
+
+    
+    .card {
+        width: 100%;
+        box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2); 
+        padding: 6rem 12rem;
+        text-align: center;
+        background-color: #f1f1f1;
+        height: auto;
+    
+    }
+    
+    .column {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .row {margin: 0 0;}
+
+        
+    .card2 {
+        box-shadow: 10px 0px 0px 0 rgba(0, 0, 0, 0.2); 
+        padding: 10rem 0rem 0rem;
+        text-align: center;
+        background-color: rgb(236, 155, 155);
+        width: 100%;
+        height: fit-content;
+      
+      
+      }
+    h1.name {
+        background-color: yellow;
+        font-size: 18px;
+        font-style: bold;
+        
+        color: rgb(48, 37, 145);
+        text-align:center;
+    
+    }
+    p.desc {
+        border: 1.5px solid #1d0124;
+        color:rgb(245, 93, 6);
+        font-family:'Times New Roman', Times, serif;
+        background-color: rgb(214, 213, 213);
+        font-size: 12px; 
+    }
+    p.discount {
+        color: red;
+        font-size: 15px;
+        font-style: italic;
+    }
+    
+    h3.price {
+        text-align:right;
+        color: blueviolet;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+    }
+    
+    
+    
+          
+     .item {
+         width:100%;
+
+     } 
+     .focus2 button {
+        padding: 10px 10px;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        outline: none;
+        background-color: #f71d0e;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px rgb(222, 238, 78);
+      }
+     .food_card button {
+        padding: 10px 10px;
+        font-size: 12px;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+        background-color: #32f5aa;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 5px #999;
+     } 
+    
+
+    .search-field {
+        width: 90%;
+        padding: 2rem 7rem 2rem 3rem;
+        border: rgb(54, 31, 31) solid 2px;
+        border-radius: 100px;
+        outline: none;
+        background-color: rgb(255, 248, 220);
+      }
+
+      .thanks {
+          width: 175px;
+          height: 250px;
+      }
+
+      .person{
+          width: 40%;
+          height: 40%;
+      }
+     
+      
+    /*.checkbox {
+        display: inline;
+    }
+    .menu {
+        width: fit-content;
+        list-style: none;
+        float: right;
+        display: none;
+    }
+    .menu-label {
+        display: block;
+    }
+    .enter {
+        display: block;
+        height: 4rem;
+        float: right;
+        margin: 2rem 3rem;
+    }
+
+    .exit {
+        display: block;
+        height: 4rem;
+        float: right;
+        margin: 2rem 3rem;
+    }
+
+      #checkbox:checked + .menu-label{
+        display: block;
+    }
+    #checkbox:checked ~ .exit-label{
+        display: block;
+    }
+    #checkbox:checked ~ .menu {
+        display: block;
+    }
+    #checkbox:checked ~ #menu-newline {
+        display: block; */
+    }
+  
+  h1.intro-img {
+      width: 100%;
+      height: fit-content;
+      top: 4px;
+      padding: 3px 8px;
+      align: center;
+  }
+  p.intro{
+    text-align: justify;
+    font-size: 11px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.intro button {
+    padding: 8px 8px;
+  font-size: 9px;
+  text-align: center;
+  cursor: pointer;
+  outline:rgba(0, 0, 0, 0.2);
+  background-color: #9b489b;
+  border: solid 2px navy;
+  
+  box-shadow: 0 5px #999;
+  }
+
+  .cover {
+      width: 100%;
+
+  }
+ 
+  .left {
+      
+      width: 100%;
+  }
+  .right {
+      width: 100%;
+      align-items: center;
+  }
+
+  }
+
